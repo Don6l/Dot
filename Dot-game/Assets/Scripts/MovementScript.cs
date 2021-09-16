@@ -20,8 +20,11 @@ public class MovementScript : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 newDirection = new Vector3(horizontalInput, verticalInput, 0f);
-        transform.Translate(newDirection * _speed * Time.deltaTime);
+        //Vector3 newDirection = new Vector3(horizontalInput, verticalInput, 0f);
+        //transform.Translate(newDirection * _speed * Time.deltaTime);
+
+        Vector3 move = transform.forward * verticalInput + transform.right * horizontalInput;
+        transform.Translate(_speed * Time.deltaTime * move);
     }
     
 }
