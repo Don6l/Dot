@@ -6,7 +6,9 @@ public class MovementScript : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 5f;
-    
+
+    [SerializeField]
+    GameObject Dot = new GameObject();
 
     // Update is called once per frame
     void Update()
